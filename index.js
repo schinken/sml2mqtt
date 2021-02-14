@@ -12,10 +12,12 @@ var smTransport = SmartmeterObis.init({
     if (error) {
         return console.error(error);
     }
-
+    
+    console.log('Received new SML result');
     for (var id in result) {
         mqttClient.publish(config.mqtt.topic + '/' + result[id].idToString(), result[id].valueToString(), config.mqtt.options);
     }
 });
 
 smTransport.process();
+console.log('Attached to ' + config.serialDevice);
