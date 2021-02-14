@@ -1,7 +1,7 @@
 
 
 module.exports = {
-    serialDevice: '/dev/smartmeter/n',
+    serialDevice: '/dev/ttyUSB0',
     mqtt: {
         server: 'mqtt.server.org',
         topic: 'infrastructure/smartmeter/house',
