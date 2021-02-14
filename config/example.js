@@ -4,6 +4,10 @@ module.exports = {
     serialDevice: '/dev/smartmeter/n',
     mqtt: {
         server: 'mqtt.server.org',
-        baseTopic: 'infrastructure/smartmeter/house'
+        topic: 'infrastructure/smartmeter/house',
+        options: {
+            retain: true,
+            qos: 1
+        }
     }
 };

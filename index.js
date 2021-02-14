@@ -14,7 +14,7 @@ var smTransport = SmartmeterObis.init({
     }
 
     for (var id in result) {
-        mqttClient.publish(config.mqtt.topic + '/' + result[id].idToString(), result[id].valueToString());
+        mqttClient.publish(config.mqtt.topic + '/' + result[id].idToString(), result[id].valueToString(), config.mqtt.options);
     }
 });
 
